@@ -1,0 +1,72 @@
+# Local Startup & Shell Scripts (Machine-specific)
+start-backend.sh
+start-frontend.sh
+
+# Environment & Secret Files
+.env
+.env.*
+!.env.example
+application.yaml
+**/application.yaml
+application.yml
+**/application.yml
+application-local.properties
+application-local.yml
+secrets/
+credentials/
+
+# Local Tools & Portable Runtimes
+jdk-local/
+node-local/
+
+# Build & Dependency Outputs
+target/
+**/target/
+node_modules/
+**/node_modules/
+dist/
+dist-ssr/
+.output/
+.vinxi/
+.tanstack/
+.nitro/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Database & Data Stores
+*.db
+*.sqlite
+*.pgdata
+
+# Keys & Certificates
+*.pem
+*.key
+*.id_rsa
+*.crt
+
+# Tunnels & Networking Configuration
+cloudflared/
+.cloudflared/
+ngrok/
+.ngrok2/
+*.tunnel
+
+# IDE & OS Metadata
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,31 @@
+server:
+  port: ${SERVER_PORT:8080}
+  address: 0.0.0.0
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/trading}
+    username: ${DB_USERNAME:YOUR_DB_USERNAME}
+    password: ${DB_PASSWORD:YOUR_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  freemarker:
+    expose-request-attributes: true
+
+stripe:
+  api:
+    publishableKey: ${STRIPE_PUBLISHABLE_KEY:YOUR_STRIPE_PUBLISHABLE_KEY}
+    secretKey: ${STRIPE_SECRET_KEY:YOUR_STRIPE_SECRET_KEY}
+
+razorpay:
+  api:
+    key: ${RAZORPAY_KEY:YOUR_RAZORPAY_KEY}
+    secret: ${RAZORPAY_SECRET:YOUR_RAZORPAY_SECRET}
